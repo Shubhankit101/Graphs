@@ -42,9 +42,25 @@ int main()
     S(N) = O(2E)  Twice the number of edges,Since each edge is connected to tow Nodes
     */
     
+    //Using Adjacent List to represent the Directed Graph    
+    vector<int> vec[n+1];
+    
+    for(int i=0;m>i;i++)
+    {
+        int u, v;
+        cin >> u >> v;
+        
+        //u--->v
+        vec[u].push_back(v);
+        //vec[v].push_back(u);
+    }
+    /* 
+    Time and Space Complexity when we use Adajacent List to represent Directed Graph.    
+    T(N) = O(N)
+    S(N) = O(E)  Since we are only consuming one edge instead of two.
+    */
     
     
     
     return 0;
 }
- 
